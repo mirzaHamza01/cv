@@ -1,0 +1,52 @@
+.cv-template2-box {
+  margin-top: 10px;
+  max-width: 150px;
+  min-width: 150px;
+  min-height: 202px;
+  max-height: 202px;
+  border-radius: 0% !important;
+  box-shadow: unset;
+  border: 1px solid #c5c5c5;
+  margin-right: 32px;
+  .css-vj1n65-MuiGrid-root {
+    display: flex;
+    height: 200px;
+  }
+  .cv-template-side-bar {
+    background: #c0cbd7;
+    height: inherit;
+  }
+  .cv-template-body {
+    height: 80%;
+    display: flex;
+    align-items: end;
+    .cv-template-body-container {
+      display: flex;
+      margin-left: -25px;
+      align-items: center;
+    }
+
+    .cv-template-body-title {
+      font-size: 6px;
+      margin-left: 10px;
+      font-family: Univers Next Pro thin Versal;
+    }
+    .cv-template-user-image {
+      border-radius: 50%;
+    }
+    .cv-template-body-detail {
+      font-size: 3px;
+      margin-left: 10px; 
+      margin-top: 20px;
+      font-family: Univers;
+      display: flex;
+      .cv-template-body-detail-title {
+        font-weight: 600;
+        margin-right: 5px;
+      }
+      .cv-template-body-detail-text {
+        margin-right: 5px;
+      }
+    }
+  }
+}

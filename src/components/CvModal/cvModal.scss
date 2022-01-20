@@ -1,0 +1,43 @@
+.cv-modal-dialog {
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    border-radius: 0% !important;
+  }
+  .cv-modal-content {
+    padding: 16px 18px;
+    overflow: hidden;
+  }
+  .cv-modal-content-container {
+    border: 1px solid #c5c5c5;
+    padding: 20px 25px;
+    .css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+      padding-left: 0% !important;
+      padding-top: 0%;
+      text-transform: uppercase;
+      color: #2882d2;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .select-resume-title {
+      margin-top: 20px;
+    }
+    .select-resume-type {
+      display: flex;
+    }
+    .css-hlj6pa-MuiDialogActions-root {
+      padding-bottom: 10px;
+      .css-sghohy-MuiButtonBase-root-MuiButton-root {
+        border-radius: 0%;
+        background: #2882d2;
+        font-weight: 600;
+        padding: 6px 30px;
+        letter-spacing: 0.5px;
+      }
+    }
+    .select-resume-dropdown {
+      width: 47%;
+      .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+        border-radius: 0;
+      }
+    }
+  }
+}
