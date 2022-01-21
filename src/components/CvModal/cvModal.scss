@@ -1,10 +1,12 @@
 .cv-modal-dialog {
   .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
     border-radius: 0% !important;
+    max-width: 60%;
+    height: fit-content;
   }
   .cv-modal-content {
     padding: 16px 18px;
-    overflow: hidden;
+    overflow: auto;
   }
   .cv-modal-content-container {
     border: 1px solid #c5c5c5;
@@ -21,6 +23,7 @@
       margin-top: 20px;
     }
     .select-resume-type {
+      margin-top: 10px;
       display: flex;
     }
     .css-hlj6pa-MuiDialogActions-root {
@@ -39,5 +42,11 @@
         border-radius: 0;
       }
     }
+  }
+}
+.cv-view-dialog {
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    max-width: 230mm;
+    min-width: 230mm;
   }
 }

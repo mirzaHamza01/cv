@@ -34,7 +34,7 @@ export const CvTemplate2 = React.forwardRef(
                   src={UserImage}
                 />
                 <div className="cv-template-body-title">
-                  PROF. DR. <br /> HAMZA
+                  PROF.  <br />  DR. MIRZA HAMZA
                 </div>
               </div>
               <div className="cv-template-body-detail">

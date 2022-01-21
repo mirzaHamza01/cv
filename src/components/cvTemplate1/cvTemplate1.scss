@@ -5,9 +5,9 @@
   min-height: 202px;
   max-height: 202px;
   border-radius: 0% !important;
+  cursor: pointer;
   box-shadow: unset;
   border: 1px solid #c5c5c5;
-  margin-right: 32px;
   .css-vj1n65-MuiGrid-root {
     display: flex;
     height: 200px;
@@ -23,11 +23,13 @@
     align-items: end;
     .cv-template-body-title {
       font-size: 6px;
+      color: #58595b;
       padding-bottom: 34px;
       font-family: Univers Next Pro thin Versal;
     }
     .cv-template-body-detail {
       font-size: 3px;
+      color: #58595b;
       font-family: Univers;
       display: flex;
       .cv-template-body-detail-title {

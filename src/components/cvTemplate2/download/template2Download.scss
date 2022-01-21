@@ -1,0 +1,68 @@
+.cv-template2-download-box {
+  max-height: 90%;
+  min-height: 90%;
+  min-width: 210mm;
+  max-width: 210mm;
+  margin-right: unset;
+  border-radius: 0% !important;
+  box-shadow: unset;
+  border: 1px solid #c5c5c5;
+  .css-y7jnfg-MuiPaper-root {
+    border-radius: 0% !important;
+  }
+  .css-vj1n65-MuiGrid-root {
+    display: flex;
+    height: 296mm;
+  }
+  .cv-template-side-bar {
+    background: #c0cbd7;
+    height: inherit;
+  }
+  .cv-template-body {
+    display: flex;
+    .cv-template-body-container {
+      display: flex;
+      margin-left: -17%;
+      align-items: center;
+      align-items: flex-end;
+
+      height: 35%;
+    }
+    .cv-template-user-image {
+      border-radius: 50%;
+    }
+    .cv-template-body-title {
+      margin-left: 38px;
+      color: #58595b;
+      font-size: 36px;
+      padding-bottom: 34px;
+      display: flex;
+      font-family: Univers Next Pro thin Versal;
+    }
+    .cv-template-body-detail {
+      font-size: 18px;
+      font-family: Univers;
+      align-items: flex-end;
+      height: 46%;
+      color: #58595b;
+      margin-left: 38px;
+      display: flex;
+      .cv-template-body-detail-title {
+        width: 100%;
+        font-family: Univers Next Pro thin Versal;
+
+        .head {
+          font-weight: 600;
+          font-size: 18px;
+          width: 38%;
+        }
+        .detail {
+          font-weight: normal;
+        }
+      }
+      .cv-template-body-detail-text {
+        margin-right: 5px;
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ export const CvTemplate3 = React.forwardRef(
   ({ handleSelection, selectThird, color }, ref) => {
     return (
       <Paper
-      ref={ref}
+        ref={ref}
         sx={{ flexGrow: 1 }}
         onClick={() => {
           handleSelection(3);
@@ -28,7 +28,7 @@ export const CvTemplate3 = React.forwardRef(
               <div className="cv-template-body-title-container">
                 <img width={45} height={50} alt="171x180" src={UserImage} />
                 <div className="cv-template-body-title">
-                  PROF. DR. <br /> HAMZA
+                  PROF. <br /> DR. MIRZA HAMZA
                 </div>
               </div>
               <div

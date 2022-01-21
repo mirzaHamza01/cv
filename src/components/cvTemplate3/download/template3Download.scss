@@ -1,17 +1,18 @@
-.cv-template3-box {
-  margin-top: 10px;
-  max-width: 150px;
-  cursor: pointer;
-  min-width: 150px;
-  min-height: 202px;
-  max-height: 202px;
+.cv-template3-download-box {
+  max-height: 90%;
+  min-height: 90%;
+  min-width: 210mm;
+  max-width: 210mm;
+  margin-right: unset;
   border-radius: 0% !important;
   box-shadow: unset;
   border: 1px solid #c5c5c5;
-  // margin-right: 32px;
+  .css-y7jnfg-MuiPaper-root {
+    border-radius: 0% !important;
+  }
   .css-vj1n65-MuiGrid-root {
     display: flex;
-    height: 200px;
+    height: 296mm;
   }
   .cv-template-side-bar {
     background: #c0cbd7;
@@ -27,34 +28,48 @@
       width: 100%;
     }
     .cv-template-body-title-container {
-      height: 40%;
+      height: 37%;
       display: flex;
-      margin-bottom: -14px;
+      margin-bottom: -10%;
       justify-content: center;
       align-items: flex-end;
     }
     .cv-template-body-title {
-      font-size: 6px;
+      font-size: 36px;
+      margin-left: 38px;
+
       padding-bottom: 20px;
       color: #58595b;
       padding-left: 6px;
       font-family: Univers Next Pro thin Versal;
     }
     .cv-template-body-detail {
-      font-size: 3px;
+      font-size: 18px;
       font-family: Univers;
       color: #58595b;
-      height: 67%;
-      justify-content: center;
       align-items: center;
+      height: 70.1%;
       display: flex;
       .cv-template-body-detail-title {
-        font-weight: 600;
-        margin-left: 10px;
-        margin-right: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        font-family: Univers Next Pro thin Versal;
+
+        .head {
+          font-weight: 600;
+          display: flex;
+          font-size: 18px;
+          width: 38%;
+        }
+        .detail {
+          display: flex;
+          width: 45%;
+          font-weight: normal;
+        }
       }
       .cv-template-body-detail-text {
-        margin-top: 3px;
+        margin-right: 5px;
       }
     }
   }

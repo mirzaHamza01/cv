@@ -3,11 +3,11 @@
   max-width: 150px;
   min-width: 150px;
   min-height: 202px;
+  cursor: pointer;
   max-height: 202px;
   border-radius: 0% !important;
   box-shadow: unset;
   border: 1px solid #c5c5c5;
-  margin-right: 32px;
   .css-vj1n65-MuiGrid-root {
     display: flex;
     height: 200px;
@@ -36,7 +36,7 @@
     }
     .cv-template-body-detail {
       font-size: 3px;
-      margin-left: 10px; 
+      margin-left: 10px;
       margin-top: 20px;
       font-family: Univers;
       display: flex;

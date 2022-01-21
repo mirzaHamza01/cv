@@ -25,7 +25,7 @@ export const CvTemplate1 = React.forwardRef(
           <Grid xs className="cv-template-body">
             <div>
               <div className="cv-template-body-title">
-                PROF. DR. <br /> HAMZA
+                PROF. <br /> DR. MIRZA HAMZA
               </div>
               <div className="cv-template-body-detail">
                 <div className="cv-template-body-detail-title">

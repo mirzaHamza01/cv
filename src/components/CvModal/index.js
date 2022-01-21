@@ -7,41 +7,26 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import { Divider } from "@mui/material";
+import { Divider, Grid } from "@mui/material";
 import { CvTemplate1 } from "../cvTemplate1";
 
 import TypeDrowpDown from "./cvTypeDropdown";
 import { CvTemplate2 } from "../cvTemplate2";
 import { CvTemplate3 } from "../cvTemplate3";
 import ReactToPrint from "react-to-print";
+import { Col, Container, Row } from "react-bootstrap";
+import CvView from "./cvView";
 
 export default function CvModal() {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
-  const componentRefFirst = React.useRef(null);
-  const componentRefSecond = React.useRef(null);
-  const componentRefThird = React.useRef(null);
+
   const [color, setColor] = React.useState("#c0cbd7");
   const [selectFirst, setSelectFirst] = useState(false);
-  const [selectSecond, setSelectSecond] = useState(true);
+  const [selectSecond, setSelectSecond] = useState(false);
   const [selectThird, setSelectThird] = useState(false);
-  const reactToPrintContent = React.useCallback(() => {
-    if (selectFirst) {
-      return componentRefFirst.current;
-    } else if (selectSecond) {
-      return componentRefSecond.current;
-    } else {
-      return componentRefThird.current;
-    }
-  }, [
-    componentRefFirst.current,
-    componentRefThird.current,
-    componentRefSecond.current,
-    selectFirst,
-    selectSecond,
-    selectThird,
-  ]);
+
   function handleSelection(id) {
     if (id === 1) {
       setSelectFirst(true);
@@ -56,6 +41,7 @@ export default function CvModal() {
       setSelectSecond(false);
       setSelectThird(true);
     }
+    setOpenView(true);
   }
 
   const handleClickOpen = () => {
@@ -64,7 +50,12 @@ export default function CvModal() {
 
   const handleClose = () => {
     setOpen(false);
+    setSelectFirst(false);
+    setSelectSecond(false);
+    setSelectThird(false);
+    setColor("#c0cbd7");
   };
+  const [openView, setOpenView] = React.useState(false);
 
   const colors = [
     "#c0cbd7",
@@ -75,16 +66,7 @@ export default function CvModal() {
     "#c31924",
     "#237ec5",
   ];
-  const reactToPrintTrigger = React.useCallback(() => {
-    return (
-      <Button onClick={handleClose} autoFocus variant="contained">
-        PDF EXPORT
-      </Button>
-    );
-  }, []);
-  const handleAfterPrint = React.useCallback(() => {
-    // setOpen(false);
-  }, []);
+
   return (
     <div className="cv-modal-container">
       <Button variant="outlined" onClick={handleClickOpen}>
@@ -105,26 +87,32 @@ export default function CvModal() {
             <Divider />
             <DialogContentText>
               <div className="select-resume-title">Select Resume Type</div>
-              <div className="select-resume-type">
-                <CvTemplate1
-                  ref={componentRefFirst}
-                  handleSelection={handleSelection}
-                  selectFirst={selectFirst}
-                  color={color}
-                />
-                <CvTemplate2
-                  handleSelection={handleSelection}
-                  ref={componentRefSecond}
-                  selectSecond={selectSecond}
-                  color={color}
-                />
-                <CvTemplate3
-                  ref={componentRefThird}
-                  handleSelection={handleSelection}
-                  selectThird={selectThird}
-                  color={color}
-                />
-              </div>
+
+              <Container fluid className="select-resume-type">
+                <Row>
+                  <Col style={{ maxWidth: "fit-content" }}>
+                    <CvTemplate1
+                      handleSelection={handleSelection}
+                      selectFirst={selectFirst}
+                      color={color}
+                    />
+                  </Col>
+                  <Col style={{ maxWidth: "fit-content" }}>
+                    <CvTemplate2
+                      handleSelection={handleSelection}
+                      selectSecond={selectSecond}
+                      color={color}
+                    />
+                  </Col>
+                  <Col style={{ maxWidth: "fit-content" }}>
+                    <CvTemplate3
+                      handleSelection={handleSelection}
+                      selectThird={selectThird}
+                      color={color}
+                    />
+                  </Col>
+                </Row>
+              </Container>
               <div className="select-resume-color-scheme mt-4">
                 <div>Choose your color scheme</div>
                 <div className="d-flex mt-3">
@@ -155,16 +143,17 @@ export default function CvModal() {
                 <TypeDrowpDown />
               </div>
             </DialogContentText>
-            <DialogActions>
-              <ReactToPrint
-                content={reactToPrintContent}
-                onAfterPrint={handleAfterPrint}
-                trigger={reactToPrintTrigger}
-              />
-            </DialogActions>
           </div>
         </DialogContent>
       </Dialog>
+      <CvView
+        open={openView}
+        setOpen={setOpenView}
+        selectFirst={selectFirst}
+        selectSecond={selectSecond}
+        selectThird={selectThird}
+        color={color}
+      />
     </div>
   );
 }
